@@ -15,7 +15,7 @@ const Posts = () => {
       id: "2",
       username: "BlackWidow",
       userImage:
-        "https://media1.popsugar-assets.com/files/thumbor/ZCWD9YXxqYzk9riO2WR2OrxzWUw/721x0:1801x1080/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/07/01/098/n/46207611/5d2cc4f65d1ab1d1992803.52716266_/i/Why-Tony-Stark-Best-Marvel-Character.jpg",
+        "https://assets-prd.ignimgs.com/2021/03/23/black-widow-button-1616528351974.jpg",
       img: "https://www.tvinsider.com/wp-content/uploads/2022/09/cobra-kai-season-5-1014x570.jpg",
       caption: "Miagi-do Rocks",
     },
