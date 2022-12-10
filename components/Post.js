@@ -1,5 +1,10 @@
 import React from "react";
-import { DotsCircleHorizontalIcon } from "@heroicons/react/outline";
+import {
+  DotsCircleHorizontalIcon,
+  HeartIcon,
+  ChatIcon,
+  BookmarkIcon,
+} from "@heroicons/react/outline";
 
 const Post = ({ img, userImg, username, caption, id }) => {
   return (
@@ -16,6 +21,14 @@ const Post = ({ img, userImg, username, caption, id }) => {
       </div>
       {/* Post Image */}
       <img className="object-cover w-full" src={img} alt="post-image" />
+      {/* Post Image */}
+      <div className="flex justify-between px-4 pt-4">
+        <div className="flex space-x-4">
+          <HeartIcon className="btn " />
+          <ChatIcon className="btn" />
+        </div>
+        <BookmarkIcon className="btn" />
+      </div>
     </div>
   );
 };
