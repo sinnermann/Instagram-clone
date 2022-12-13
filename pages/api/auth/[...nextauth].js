@@ -10,8 +10,8 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
-  page: {
-    signin: "/auth/signin",
+  pages: {
+    signIn: "/auth/signin",
   },
 };
 
