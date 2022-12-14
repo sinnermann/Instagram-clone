@@ -4,7 +4,12 @@ import { useRecoilState } from "recoil";
 
 const UploadModal = () => {
   const [open, setOpen] = useRecoilState(modalState);
-  return <h1>UploadModal</h1>;
+  return (
+    <div>
+      <h1>UploadModal</h1>
+      {open && <h1>The Modal is open</h1>}
+    </div>
+  );
 };
 
 export default UploadModal;
