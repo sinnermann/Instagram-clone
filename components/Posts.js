@@ -13,7 +13,7 @@ const Posts = () => {
       }
     );
     return unsubscribe;
-  });
+  }, [db]);
 
   return (
     <div>
