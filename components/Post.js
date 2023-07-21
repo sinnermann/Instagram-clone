@@ -88,23 +88,16 @@ const Post = ({ img, userImg, username, caption, id }) => {
       {/* Post Image */}
       <img className="object-cover w-full" src={img} alt="post-image" />
       {/* Post Buttons */}
-      {session && (
-        <div className="flex justify-between px-4 pt-4">
-          <div className="flex space-x-4">
-            {hasLiked ? (
-              <HeartIconFilled
-                onClick={likePost}
-                className="text-red-400 btn "
-              />
-            ) : (
-              <HeartIcon onClick={likePost} className="btn " />
-            )}
+      <div className="flex justify-between px-4 pt-4">
+        <div className="flex space-x-4">
+          <HeartIconFilled onClick={likePost} className="text-red-400 btn" />
 
-            <ChatIcon className="btn" />
-          </div>
-          <BookmarkIcon className="btn" />
+          <HeartIcon onClick={likePost} className="btn" />
+
+          <ChatIcon className="btn" />
         </div>
-      )}
+        <BookmarkIcon className="btn" />
+      </div>
 
       {/* Post comments  */}
       <p className="p-5 truncate">
@@ -134,26 +127,25 @@ const Post = ({ img, userImg, username, caption, id }) => {
         </div>
       )}
       {/* Post input box */}
-      {session && (
-        <form className="flex items-center p-4">
-          <EmojiHappyIcon className="h-7" />
-          <input
-            value={comment}
-            onChange={(event) => setComment(event.target.value)}
-            className="border-none flex-1 focus:ring-0"
-            type="text"
-            placeholder="Enter your comment..."
-          />
-          <button
-            type="submit"
-            onClick={sendComment}
-            disabled={!comment.trim()}
-            className="text-blue-400 font-bold disabled:text-blue-200"
-          >
-            Post it
-          </button>
-        </form>
-      )}
+
+      <form className="flex items-center p-4">
+        <EmojiHappyIcon className="h-7" />
+        <input
+          value={comment}
+          onChange={(event) => setComment(event.target.value)}
+          className="border-none flex-1 focus:ring-0"
+          type="text"
+          placeholder="Enter your comment..."
+        />
+        <button
+          type="submit"
+          onClick={sendComment}
+          disabled={!comment.trim()}
+          className="text-blue-400 font-bold disabled:text-blue-200"
+        >
+          Post it
+        </button>
+      </form>
     </div>
   );
 };
